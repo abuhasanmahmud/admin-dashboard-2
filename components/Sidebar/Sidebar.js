@@ -23,7 +23,7 @@ function classNames(...classes) {
 
 const Sidebar = ({ component }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  console.log("icon");
+  // console.log("icon");
   return (
     <>
       <div>
