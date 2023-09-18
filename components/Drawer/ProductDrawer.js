@@ -8,7 +8,7 @@ import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { Bars } from "react-loader-spinner";
 
-const ProductDrawer = ({ open, setOpen, setProductAdd, productDetails }) => {
+const ProductDrawer = ({ open, setOpen, setProductAdd, productDetails, baseUrl }) => {
   const {
     register,
     handleSubmit,
@@ -32,7 +32,7 @@ const ProductDrawer = ({ open, setOpen, setProductAdd, productDetails }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("/api/product/add", {
+      const response = await fetch(`${baseUrl}/api/product/add`, {
         method: "POST",
         body: JSON.stringify({
           products: data,
@@ -56,7 +56,7 @@ const ProductDrawer = ({ open, setOpen, setProductAdd, productDetails }) => {
     // console.log("data in products", data);
 
     try {
-      const response = await fetch(`/api/product/${productDetails._id}`, {
+      const response = await fetch(`${baseUrl}/api/product/${productDetails._id}`, {
         method: "PATCH",
         body: JSON.stringify({
           product: data,

@@ -5,9 +5,9 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import ProductDelete from "../modal/ProductDelete";
 import ProductDrawer from "../Drawer/ProductDrawer";
-import { baseUrl } from "@/app/page";
+// import { baseUrl } from "@/app/page";
 
-const Products = () => {
+const Products = ({ baseUrl }) => {
   //   console.log("products", allProducts);
   const [open, setOpen] = useState(false);
   const [products, setProducts] = useState([]);
@@ -19,7 +19,7 @@ const Products = () => {
   // console.log("productAdd", productAdd);
 
   const featchProduct = async () => {
-    // console.log("base url", baseUrl);
+    console.log("base url", baseUrl);
     const res = await fetch(`${baseUrl}/api/product/products`);
     const data = await res.json();
     // console.log("res in products ", data);
@@ -43,6 +43,7 @@ const Products = () => {
   return (
     <div>
       <ProductDelete
+        baseUrl={baseUrl}
         deletModalOpen={deletModalOpen}
         setDeletModalOpen={setDeletModalOpen}
         productId={productId}
@@ -151,6 +152,7 @@ const Products = () => {
         open={open}
         setOpen={setOpen}
         setProductAdd={setProductAdd}
+        baseUrl={baseUrl}
       />
     </div>
   );
