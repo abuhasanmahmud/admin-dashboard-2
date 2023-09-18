@@ -3,7 +3,7 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import React from "react";
 const baseUrl =
   process.env.NODE_ENVV == "production"
-    ? "https://admin-dashboard-2-three.vercel.app"
+    ? "http://admin-dashboard-2-three.vercel.app"
     : "http://localhost:3000";
 const page = () => {
   // console.log("url", baseUrl2);
