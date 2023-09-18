@@ -1,11 +1,11 @@
-import ProductsHome from "@/components/Products/ProductsHome";
+import Products from "@/components/Products/Products";
 import Sidebar from "@/components/Sidebar/Sidebar";
 import React from "react";
 
 const page = () => {
   return (
     <>
-      <Sidebar component={<ProductsHome />} />
+      <Sidebar component={<Products />} />
     </>
   );
 };

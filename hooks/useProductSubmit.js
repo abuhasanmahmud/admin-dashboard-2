@@ -1,4 +1,3 @@
-"use client";
 import { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { SidebarContext } from "../context/SidebarContext";
@@ -20,7 +19,7 @@ const useProductSubmit = (id) => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     // if (!imageUrl) {
     //   notifyError('Image is required!');
     //   return;
