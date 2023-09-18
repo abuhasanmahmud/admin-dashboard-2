@@ -19,7 +19,7 @@ const Products = () => {
   // console.log("productAdd", productAdd);
 
   const featchProduct = async () => {
-    // console.log("base url", baseUrl);
+    console.log("base url", baseUrl);
     const res = await fetch(`${baseUrl}/api/product/products`);
     const data = await res.json();
     // console.log("res in products ", data);
