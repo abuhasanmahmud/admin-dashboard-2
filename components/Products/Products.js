@@ -5,22 +5,25 @@ import { RiDeleteBin5Fill } from "react-icons/ri";
 import { useEffect, useState } from "react";
 import ProductDelete from "../modal/ProductDelete";
 import ProductDrawer from "../Drawer/ProductDrawer";
+import { baseUrl } from "@/app/page";
 
 const Products = () => {
   //   console.log("products", allProducts);
   const [open, setOpen] = useState(false);
-  const [products, setProduct] = useState([]);
+  const [products, setProducts] = useState([]);
   const [productAdd, setProductAdd] = useState(false);
   const [deletModalOpen, setDeletModalOpen] = useState(false);
   const [productId, setProductId] = useState("");
   const [deleteSuccessFully, setDeleteProductSuccessfully] = useState(false);
   const [productDetails, setProductDetails] = useState({});
   // console.log("productAdd", productAdd);
+
   const featchProduct = async () => {
-    const res = await fetch("/api/product/products");
+    console.log("base url", baseUrl);
+    const res = await fetch(`${baseUrl}/api/product/products`);
     const data = await res.json();
     // console.log("res in products ", data);
-    setProduct(data);
+    setProducts(data);
     setProductAdd(false);
     setDeleteProductSuccessfully(false);
   };

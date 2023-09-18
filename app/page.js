@@ -1,4 +1,6 @@
-export default function Home() {
+export const baseUrl = process.env.NODE_ENV == "production" ? "baseurl-versel" : "http://localhost:3000";
+const Home = () => {
+  console.log("base url......", baseUrl);
   return (
     <>
       <main className="py-10">
@@ -6,4 +8,6 @@ export default function Home() {
       </main>
     </>
   );
-}
+};
+
+export default Home;
