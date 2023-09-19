@@ -1,9 +1,9 @@
 export const baseUrl =
-  process.env.NODE_ENV !== "production"
+  process.env.NODE_ENV === "production"
     ? "https://admin-dashboard-2-three.vercel.app"
     : "http://localhost:3000";
 const Home = () => {
-  console.log("url..........", baseUrl, "porcess.env=======", process.env.NODE_ENV);
+  // console.log("all env defalt variable", process.env);
   return (
     <>
       <main className="py-10">
