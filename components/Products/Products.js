@@ -23,7 +23,7 @@ const Products = () => {
   const featchProduct = async () => {
     const res = await fetch(`${baseUrl}/api/product/products`);
     const data = await res.json();
-    // console.log("res in products ", data);
+    console.log("res in products ", data);
     setProducts(data);
     setProductAdd(false);
     setDeleteProductSuccessfully(false);
