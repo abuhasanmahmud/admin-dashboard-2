@@ -5,12 +5,12 @@ import { Dialog, Transition } from "@headlessui/react";
 import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
 import { RiDeleteBin5Fill } from "react-icons/ri";
 import { toast } from "react-toastify";
+import { baseUrl } from "@/app/page";
 const ProductDelete = ({
   deletModalOpen,
   setDeletModalOpen,
   productId,
   setDeleteProductSuccessfully,
-  baseUrl,
 }) => {
   //   const [deletModalOpen, setDeletModalOpen] = useState(true);
   // console.log("deleteProductId", deleteProductId);

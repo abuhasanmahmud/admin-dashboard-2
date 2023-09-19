@@ -7,8 +7,9 @@ import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import { Bars } from "react-loader-spinner";
+import { baseUrl } from "@/app/page";
 
-const ProductDrawer = ({ open, setOpen, setProductAdd, productDetails, baseUrl }) => {
+const ProductDrawer = ({ open, setOpen, setProductAdd, productDetails }) => {
   const {
     register,
     handleSubmit,
