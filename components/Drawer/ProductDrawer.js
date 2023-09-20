@@ -33,7 +33,7 @@ const ProductDrawer = ({ open, setOpen, setProductAdd, productDetails }) => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch(`${baseUrl}/api/product/add`, {
+      const response = await fetch(`/api/product/add`, {
         method: "POST",
         body: JSON.stringify({
           products: data,
@@ -46,7 +46,7 @@ const ProductDrawer = ({ open, setOpen, setProductAdd, productDetails }) => {
         setOpen(false);
       }
     } catch (error) {
-      console.log(error);
+      console.log("error is ", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -57,7 +57,7 @@ const ProductDrawer = ({ open, setOpen, setProductAdd, productDetails }) => {
     // console.log("data in products", data);
 
     try {
-      const response = await fetch(`${baseUrl}/api/product/${productDetails._id}`, {
+      const response = await fetch(`/api/product/${productDetails._id}`, {
         method: "PATCH",
         body: JSON.stringify({
           product: data,

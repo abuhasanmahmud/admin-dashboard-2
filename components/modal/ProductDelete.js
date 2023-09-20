@@ -18,7 +18,7 @@ const ProductDelete = ({
   const cancelButtonRef = useRef(null);
 
   const deleteProduct = async () => {
-    const res = await fetch(`${baseUrl}/api/product/${productId}`, {
+    const res = await fetch(`/api/product/${productId}`, {
       method: "DELETE",
     });
     const response = await res.json();
