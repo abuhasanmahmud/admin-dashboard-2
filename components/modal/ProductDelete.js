@@ -13,7 +13,7 @@ const ProductDelete = ({
   setDeleteProductSuccessfully,
 }) => {
   //   const [deletModalOpen, setDeletModalOpen] = useState(true);
-  console.log("deleteProductId", deleteProductId);
+  // console.log("deleteProductId", deleteProductId);
 
   const cancelButtonRef = useRef(null);
 
