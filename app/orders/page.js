@@ -4,7 +4,7 @@ import React from "react";
 // import getAllProducts from "../lib/getAllProducts";
 
 const page = async () => {
-  console.log("");
+  // console.log("");
   return (
     <div>
       <Sidebar component={<Orders />} />
