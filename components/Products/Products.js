@@ -18,7 +18,7 @@ const Products = () => {
   const [productDetails, setProductDetails] = useState({});
   // console.log("productAdd", productAdd);
 
-  console.log("base url --------", baseUrl);
+  // console.log("base url --------", baseUrl);
 
    const featchProduct = async () => {
     const res = await fetch(`/api/product/products`);
