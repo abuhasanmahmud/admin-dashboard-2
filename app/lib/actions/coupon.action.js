@@ -23,3 +23,14 @@ export async function allCoupon() {
     throw new Error(`eror ${error.message}`);
   }
 }
+
+export async function deleteCoupon({ id }) {
+  console.log(" id delete", id);
+  connectToDb();
+  try {
+    const dcoupon = await Coupon.findByIdAndRemove(id);
+    console.log("delete coupon", dcoupon);
+  } catch (error) {
+    throw new Error(`eror ${error.message}`);
+  }
+}
