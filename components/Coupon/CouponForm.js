@@ -7,7 +7,7 @@ import { usePathname, useRouter } from "next/navigation";
 const CouponForm = () => {
   const [name, setName] = useState();
   const pathName = usePathname();
-  console.log("pathname", pathName);
+  //   console.log("pathname", pathName);
   const addCoupon = (e) => {
     e.preventDefault();
     createCoupon({ name, pathName });
