@@ -24,12 +24,13 @@ export async function allCoupon() {
   }
 }
 
-export async function deleteCoupon({ id }) {
+export async function deleteCoupon({ id, path }) {
   console.log(" id delete", id);
   connectToDb();
   try {
     const dcoupon = await Coupon.findByIdAndRemove(id);
     console.log("delete coupon", dcoupon);
+    revalidatePath(path);
   } catch (error) {
     throw new Error(`eror ${error.message}`);
   }

@@ -1,12 +1,13 @@
 "use client";
-
+import { usePathname, useRouter } from "next/navigation";
 import { deleteCoupon } from "@/app/lib/actions/coupon.action";
 
 const AllCoupon = ({ cp }) => {
-  //   console.log("cp", cp);
+  console.log("cp in all coupon", cp);
+  const path = usePathname();
   const handelDeleteCoupon = async (id) => {
     //     console.log("id", id);
-    await deleteCoupon({ id });
+    deleteCoupon({ id, path });
   };
   return (
     <div>
